@@ -43,7 +43,7 @@ requirements: requirements.js requirements.python ## Install Python and JS requi
 production-requirements: ## Install Python and JS requirements for production
 	pip install -r requirements.txt
 	npm install --production
-	$(NODE_BIN)/bower install --allow-root --production
+	$(NODE_BIN)/bower install --production
 
 upgrade:
 	pip install -q -r requirements/pip_tools.txt
