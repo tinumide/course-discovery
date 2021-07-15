@@ -42,8 +42,9 @@ requirements: requirements.js requirements.python ## Install Python and JS requi
 
 production-requirements: ## Install Python and JS requirements for production
 	pip install -r requirements.txt
+	sed -i '$ a export XDG_CONFIG_HOME="$HOME/.config"' $(HOME)/.profile
 	npm install --production
-	cat $(HOME)/.profile
+	#cat $(HOME)/.profile
 	#echo "$$NODE_BIN"
 	$(CURDIR)/node_modules/bower/bin/bower install --allow-root --production
 	#$(NODE_BIN)/bower install --production
